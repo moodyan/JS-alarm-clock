@@ -2,13 +2,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <meta charset="utf-8">
     <title>Alarm Clock</title>
   </head>
   <body>
-    <h1>Hi mom!</h1>
+    <h1>Alarm Clock</h1>
     <p id="time"></p>
 
     <form id="clock">
@@ -16,12 +17,11 @@
       <input id="alarmTime" type="time" name="alarm">
       <button type="submit" name="button">Submit</button>
     </form>
-    <p>
+
+    <p id="alarm-success">
       Your alarm is set for: <span class="alarm-set-time"></span>
     </p>
-    <p id="alarm-success">
-
-    </p>
+    <img id="alarm-image" src="/img/alarm.gif" alt="alarm">
   </body>
 
 </html>

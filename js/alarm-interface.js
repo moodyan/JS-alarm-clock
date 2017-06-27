@@ -13,6 +13,11 @@ $(document).ready(function(){
     var alarm = newAlarm.wakeUp();
 
     $(".alarm-set-time").text(setTime);
+    $("#alarm-success").show();
     $("#alarm-success").text(alarm);
+    if (setTime <= currentTime) {
+      $("#alarm-image").show();
+      console.log(setTime <= currentTime);
+    };
   });
 });
