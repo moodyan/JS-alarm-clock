@@ -1,7 +1,19 @@
+#alarm-time-show {
+  display: none;
+}
+
 #alarm-success {
   display: none;
 }
 
 #alarm-image {
+  display: none;
+}
+
+#snooze-button {
+  display: none;
+}
+
+#snooze-time {
   display: none;
 }

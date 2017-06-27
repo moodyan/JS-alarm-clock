@@ -16,4 +16,12 @@ AlarmClock.prototype.wakeUp = function() {
 
 };
 
+
+AlarmClock.prototype.snooze = function() {
+  this.setTime = moment().add(05, 'minutes').format("hh:mm A");
+  console.log(this.setTime);
+  return this.setTime;
+};
+
+
 exports.alarmModule = AlarmClock;
