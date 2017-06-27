@@ -1,8 +1,10 @@
 var AlarmClock = require('./../js/alarm.js').alarmModule;
+var Sounds = require('./../js/sound.js').soundModule;
 
-$(document).ready(function() {
-  $('#time').text(moment());
-});
+function date_time() {
+  $("#time").html(moment().format('H:mm:ss'));
+}
+setInterval(date_time, 1000);
 
 $(document).ready(function(){
   $("#clock").submit(function(event){
@@ -18,6 +20,7 @@ $(document).ready(function(){
     $("#alarm-success").text(alarm);
     if (setTime <= currentTime) {
       $("#alarm-image").show();
+      Sounds();
     }
   });
   $("#snooze-button").click(function(){
@@ -30,5 +33,6 @@ $(document).ready(function(){
     $("#snooze-button").hide();
     $("#alarm-time-show").hide();
     $(".snooze-time").text(snoozeAlarm);
+    // SoundsPause();
   });
 });
