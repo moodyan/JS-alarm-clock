@@ -1,5 +1,6 @@
 var AlarmClock = require('./../js/alarm.js').alarmModule;
 var Sounds = require('./../js/sound.js').soundModule;
+var SoundsPause = require('./../js/sound.js').soundPauseModule;
 
 function date_time() {
   $("#time").html(moment().format('H:mm:ss'));
@@ -13,7 +14,6 @@ $(document).ready(function(){
     var newAlarm = new AlarmClock(setTime);
     var currentTime = moment().format("HH:mm");
     var alarm = newAlarm.wakeUp();
-    // console.log(moment($('#alarmTime').val()).add(05, 'mins').format('hh:mm A'));
     $("#alarm-time-show").show();
     $(".alarm-set-time").text(setTime);
     $("#snooze-button").show();
@@ -33,6 +33,6 @@ $(document).ready(function(){
     $("#snooze-button").hide();
     $("#alarm-time-show").hide();
     $(".snooze-time").text(snoozeAlarm);
-    // SoundsPause();
+    SoundsPause();
   });
 });

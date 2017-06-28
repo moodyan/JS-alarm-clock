@@ -3,10 +3,11 @@ function Sounds() {
   sound.play();
 }
 
-// function SoundsPause() {
-//   var sound = document.getElementById("audio");
-//   sound.pause();
-// }
+function SoundsPause() {
+  var sound = document.getElementById("audio");
+  sound.pause();
+}
 
 
 exports.soundModule = Sounds;
+exports.soundPauseModule = SoundsPause;
